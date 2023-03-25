@@ -1,0 +1,32 @@
+#! /usr/bin/env ruby
+
+# Get the project name from the first command line argument
+project_name = ARGV[0]
+
+# Print usage text if no project name is provided
+if project_name.nil?
+  puts "Usage: ruby init_kata <project_name>"
+  exit
+end
+
+# Create a directory for the project
+Dir.mkdir(project_name)
+
+# Create directories for the lib and spec folders
+Dir.mkdir("#{project_name}/lib")
+Dir.mkdir("#{project_name}/spec")
+
+# Create an empty file for the main library code
+File.new("#{project_name}/lib/my_library.rb", 'w')
+
+# Create an example spec file
+File.write("#{project_name}/spec/my_library_spec.rb", <<~HEREDOC
+  require 'my_library'
+
+  RSpec.describe MyLibrary do
+    it "does something" do
+      # Test code goes here
+    end
+  end
+HEREDOC
+)
