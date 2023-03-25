@@ -1,5 +1,10 @@
 ## Quickstart
 
+Install gems:
+```
+bundle
+```
+
 Start a new kata (e.g. a "bowling" kata) with a starter spec file:
 ```zsh
 ruby init_kata bowling

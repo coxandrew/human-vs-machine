@@ -1,6 +1,6 @@
-# bowling_spec.rb
+# frozen_string_literal: true
 
-require 'bowling'
+require "bowling"
 
 RSpec.describe Bowling do
   let(:game) { Bowling.new }
