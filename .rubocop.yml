@@ -1,0 +1,945 @@
+require:
+- rubocop-rails
+- rubocop-rspec
+
+AllCops:
+  DisabledByDefault: true
+
+#------------------------
+# Gemspec
+#------------------------
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Dependencies in the gemspec should be alphabetically sorted.
+Gemspec/OrderedDependencies:
+  Enabled: true
+
+#------------------------
+# Layout
+#------------------------
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Align the arguments of a method call if they span more than one line.
+# StyleGuide: https://rubystyle.guide#no-double-indent
+Layout/ArgumentAlignment:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Align the elements of an array literal if they span more than one line.
+# StyleGuide: https://rubystyle.guide#no-double-indent
+Layout/ArrayAlignment:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks the indentation of the first line of the right-hand-side of a multi-line assignment.
+Layout/AssignmentIndentation:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Align block ends correctly.
+Layout/BlockAlignment:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Put end statement of multiline block on its own line.
+Layout/BlockEndNewline:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Indentation of when in a case/when/[else/]end.
+# StyleGuide: https://rubystyle.guide#indent-when-to-case
+Layout/CaseIndentation:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks the indentation of here document closings.
+Layout/ClosingHeredocIndentation:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Indentation of comments.
+Layout/CommentIndentation:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks for condition placed in a confusing position relative to the keyword.
+# StyleGuide: https://rubystyle.guide#same-line-condition
+Layout/ConditionPosition:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks the position of the dot in multi-line method calls.
+# StyleGuide: https://rubystyle.guide#consistent-multi-line-chains
+Layout/DotPosition:
+  Enabled: true
+  EnforcedStyle: trailing
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Align elses and elsifs correctly.
+Layout/ElseAlignment:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks empty comment.
+Layout/EmptyComment:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Add an empty line after magic comments to separate them from code.
+# StyleGuide: https://rubystyle.guide#separate-magic-comments-from-code
+Layout/EmptyLineAfterMagicComment:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Don't use several empty lines in a row.
+# StyleGuide: https://rubystyle.guide#two-or-more-empty-lines
+Layout/EmptyLines:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Keep blank lines around access modifiers.
+# StyleGuide: https://rubystyle.guide#empty-lines-around-access-modifier
+# Reference: ["https://edgeguides.rubyonrails.org/contributing_to_ruby_on_rails.html#follow-the-coding-conventions"]
+Layout/EmptyLinesAroundAccessModifier:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Keeps track of empty lines around method arguments.
+Layout/EmptyLinesAroundArguments:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Keeps track of empty lines around begin-end bodies.
+# StyleGuide: https://rubystyle.guide#empty-lines-around-bodies
+Layout/EmptyLinesAroundBeginBody:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Keeps track of empty lines around class bodies.
+# StyleGuide: https://rubystyle.guide#empty-lines-around-bodies
+Layout/EmptyLinesAroundClassBody:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Keeps track of empty lines around exception handling keywords.
+# StyleGuide: https://rubystyle.guide#empty-lines-around-bodies
+Layout/EmptyLinesAroundExceptionHandlingKeywords:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Keeps track of empty lines around method bodies.
+# StyleGuide: https://rubystyle.guide#empty-lines-around-bodies
+Layout/EmptyLinesAroundMethodBody:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Keeps track of empty lines around module bodies.
+# StyleGuide: https://rubystyle.guide#empty-lines-around-bodies
+Layout/EmptyLinesAroundModuleBody:
+  Enabled: true
+
+# Description: Use Unix-style line endings.
+# StyleGuide: https://rubystyle.guide#crlf
+Layout/EndOfLine:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Do not use unnecessary spacing.
+Layout/ExtraSpacing:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks the indentation of the first argument in a method call.
+Layout/FirstArgumentIndentation:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks the indentation of the first element in an array literal.
+Layout/FirstArrayElementIndentation:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks the indentation of the first key in a hash literal.
+Layout/FirstHashElementIndentation:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: This cop checks the indentation of the here document bodies.
+# StyleGuide: https://rubystyle.guide#squiggly-heredocs
+Layout/HeredocIndentation:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Keep indentation straight.
+# StyleGuide: https://rubystyle.guide#spaces-indentation
+# Reference: ["https://edgeguides.rubyonrails.org/contributing_to_ruby_on_rails.html#follow-the-coding-conventions"]
+Layout/IndentationConsistency:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Consistent indentation either with tabs only or spaces only.
+# StyleGuide: https://rubystyle.guide#spaces-indentation
+Layout/IndentationStyle:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Use 2 spaces for indentation.
+# StyleGuide: https://rubystyle.guide#spaces-indentation
+Layout/IndentationWidth:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks the indentation of the first non-blank non-comment line in a file.
+Layout/InitialIndentation:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Comments should start with a space.
+# StyleGuide: https://rubystyle.guide#hash-space
+Layout/LeadingCommentSpace:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Check for unnecessary blank lines at the beginning of a file.
+Layout/LeadingEmptyLines:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks that the closing brace in an array literal is either on the same line as the last array element, or a new line.
+Layout/MultilineArrayBraceLayout:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Ensures newlines after multiline block do statements.
+Layout/MultilineBlockLayout:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks that the closing brace in a hash literal is either on the same line as the last hash element, or a new line.
+Layout/MultilineHashBraceLayout:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks that the closing brace in a method call is either on the same line as the last method argument, or a new line.
+Layout/MultilineMethodCallBraceLayout:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks indentation of method calls with the dot operator that span more than one line.
+Layout/MultilineMethodCallIndentation:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks that the closing brace in a method definition is either on the same line as the last method parameter, or a new line.
+Layout/MultilineMethodDefinitionBraceLayout:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks indentation of binary operations that span more than one line.
+Layout/MultilineOperationIndentation:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Align the parameters of a method definition if they span more than one line.
+# StyleGuide: https://rubystyle.guide#no-double-indent
+Layout/ParameterAlignment:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Use spaces after colons.
+# StyleGuide: https://rubystyle.guide#spaces-operators
+Layout/SpaceAfterColon:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Use spaces after commas.
+# StyleGuide: https://rubystyle.guide#spaces-operators
+Layout/SpaceAfterComma:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Do not put a space between a method name and the opening parenthesis in a method definition.
+# StyleGuide: https://rubystyle.guide#parens-no-spaces
+Layout/SpaceAfterMethodName:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Tracks redundant space after the ! operator.
+# StyleGuide: https://rubystyle.guide#no-space-bang
+Layout/SpaceAfterNot:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Use spaces after semicolons.
+# StyleGuide: https://rubystyle.guide#spaces-operators
+Layout/SpaceAfterSemicolon:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks the spacing inside and after block parameters pipes.
+Layout/SpaceAroundBlockParameters:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks that the equals signs in parameter default assignments have or don't have surrounding space depending on configuration.
+# StyleGuide: https://rubystyle.guide#spaces-around-equals
+Layout/SpaceAroundEqualsInParameterDefault:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Use a space around keywords if appropriate.
+Layout/SpaceAroundKeyword:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Use a single space around operators.
+# StyleGuide: https://rubystyle.guide#spaces-operators
+Layout/SpaceAroundOperators:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks that the left block brace has or doesn't have space before it.
+Layout/SpaceBeforeBlockBraces:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: No spaces before commas.
+Layout/SpaceBeforeComma:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks for missing space between code and a comment on the same line.
+Layout/SpaceBeforeComment:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks that exactly one space is used between a method name and the first argument for method calls without parentheses.
+Layout/SpaceBeforeFirstArg:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: No spaces before semicolons.
+Layout/SpaceBeforeSemicolon:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks for spaces in lambda literals.
+Layout/SpaceInLambdaLiteral:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks the spacing inside array literal brackets.
+Layout/SpaceInsideArrayLiteralBrackets:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: No unnecessary additional spaces between elements in %i/%w literals.
+Layout/SpaceInsideArrayPercentLiteral:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks that block braces have or don't have surrounding space. For blocks taking parameters, checks that the left brace has or doesn't have trailing space.
+Layout/SpaceInsideBlockBraces:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Use spaces inside hash literal braces - or don't.
+# StyleGuide: https://rubystyle.guide#spaces-braces
+Layout/SpaceInsideHashLiteralBraces:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: No spaces after ( or before ).
+# StyleGuide: https://rubystyle.guide#spaces-braces
+Layout/SpaceInsideParens:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: No unnecessary spaces inside delimiters of %i/%w/%x literals.
+Layout/SpaceInsidePercentLiteralDelimiters:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: No spaces inside range literals.
+# StyleGuide: https://rubystyle.guide#no-space-inside-range-literals
+Layout/SpaceInsideRangeLiteral:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks the spacing inside referential brackets.
+Layout/SpaceInsideReferenceBrackets:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks for padding/surrounding spaces inside string interpolation.
+# StyleGuide: https://rubystyle.guide#string-interpolation
+Layout/SpaceInsideStringInterpolation:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks trailing blank lines and final newline.
+# StyleGuide: https://rubystyle.guide#newline-eof
+Layout/TrailingEmptyLines:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Avoid trailing whitespace.
+# StyleGuide: https://rubystyle.guide#no-trailing-whitespace
+Layout/TrailingWhitespace:
+  Enabled: true
+
+#------------------------
+# Lint
+#------------------------
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks for empty ensure block.
+Lint/EmptyEnsure:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Use `&&` operator to compare multiple values.
+Lint/MultipleComparison:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks for rubocop:enable comments that can be removed.
+Lint/RedundantCopEnableDirective:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks for unnecessary `require` statement.
+Lint/RedundantRequireStatement:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks for redundant `with_object`.
+Lint/RedundantWithObject:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Check to make sure that if safe navigation is used for a method call in an `&&` or `||` condition that safe navigation is used for all method calls on that same object.
+Lint/SafeNavigationConsistency:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Use Integer instead of Fixnum or Bignum.
+Lint/UnifiedInteger:
+  Enabled: true
+
+
+#------------------------
+# Migration
+#------------------------
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Check that cop names in rubocop:disable (etc) comments are given with department name.
+Migration/DepartmentName:
+  Enabled: true
+
+
+#------------------------
+# RSpec
+#------------------------
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Always declare attribute values as blocks.
+# StyleGuide: https://www.rubydoc.info/gems/rubocop-rspec/RuboCop/Cop/RSpec/FactoryBot/AttributeDefinedStatically
+RSpec/FactoryBot/AttributeDefinedStatically:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Use string value when setting the class attribute explicitly.
+# StyleGuide: https://www.rubydoc.info/gems/rubocop-rspec/RuboCop/Cop/RSpec/FactoryBot/FactoryClassName
+RSpec/FactoryBot/FactoryClassName:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks if examples are focused.
+# StyleGuide: https://www.rubydoc.info/gems/rubocop-rspec/RuboCop/Cop/RSpec/Focus
+RSpec/Focus:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks for `instance_double` used with `have_received`.
+# StyleGuide: https://www.rubydoc.info/gems/rubocop-rspec/RuboCop/Cop/RSpec/InstanceSpy
+RSpec/InstanceSpy:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks if an example group defines `subject` multiple times.
+# StyleGuide: https://www.rubydoc.info/gems/rubocop-rspec/RuboCop/Cop/RSpec/MultipleSubjects
+RSpec/MultipleSubjects:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks for proper shared_context and shared_examples usage.
+# StyleGuide: https://www.rubydoc.info/gems/rubocop-rspec/RuboCop/Cop/RSpec/SharedContext
+RSpec/SharedContext:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Enforces use of string to titleize shared examples.
+# StyleGuide: https://www.rubydoc.info/gems/rubocop-rspec/RuboCop/Cop/RSpec/SharedExamples
+RSpec/SharedExamples:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: This cop checks for calling a block within a stub.
+# StyleGuide: https://www.rubydoc.info/gems/rubocop-rspec/RuboCop/Cop/RSpec/Yield
+RSpec/Yield:
+  Enabled: true
+
+
+
+#------------------------
+# Rails
+#------------------------
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Enforces consistent use of action filter methods.
+Rails/ActionFilter:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: false
+# Description: Check that jobs subclass ApplicationJob.
+Rails/ApplicationJob:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: false
+# Description: Check that models subclass ApplicationRecord.
+Rails/ApplicationRecord:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Use `assert_not` instead of `assert !`.
+Rails/AssertNot:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Do not use allow_blank as an option to delegate.
+Rails/DelegateAllowBlank:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Use `find_by` instead of dynamic `find_by_*`.
+# StyleGuide: https://rails.rubystyle.guide#find_by
+Rails/DynamicFindBy:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Favor `Rails.env.production?` over `Rails.env == 'production'`.
+Rails/EnvironmentComparison:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Finds redundant use of `allow_nil` when `allow_blank` is set to certain values in model validations.
+Rails/RedundantAllowNil:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Use `assert_not` methods instead of `refute` methods.
+Rails/RefuteMethods:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Do not assign relative date to constants.
+Rails/RelativeDateConstant:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Use Ruby's safe navigation operator (`&.`) instead of `try!`.
+Rails/SafeNavigation:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: false
+# Description: Prefer the use of uniq or distinct before pluck.
+Rails/UniqBeforePluck:
+  Enabled: true
+
+
+
+#------------------------
+# Style
+#------------------------
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Use Array#join instead of Array#*.
+# StyleGuide: https://rubystyle.guide#array-join
+Style/ArrayJoin:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks for uses of Module#attr.
+# StyleGuide: https://rubystyle.guide#attr
+Style/Attr:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Do not use block comments.
+# StyleGuide: https://rubystyle.guide#no-block-comments
+Style/BlockComments:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Avoid using {...} for multi-line blocks (multiline chaining is always ugly). Prefer {...} over do...end for single-line blocks.
+# StyleGuide: https://rubystyle.guide#single-line-blocks
+Style/BlockDelimiters:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks for uses of character literals.
+# StyleGuide: https://rubystyle.guide#no-character-literals
+Style/CharacterLiteral:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Use self when defining module/class methods.
+# StyleGuide: https://rubystyle.guide#def-self-class-methods
+Style/ClassMethods:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Do not use :: for defining class methods.
+# StyleGuide: https://rubystyle.guide#colon-method-definition
+Style/ColonMethodDefinition:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Use `` or %x around command literals.
+# StyleGuide: https://rubystyle.guide#percent-x
+Style/CommandLiteral:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Use def with parentheses when there are arguments.
+# StyleGuide: https://rubystyle.guide#method-parens
+Style/DefWithParentheses:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Use the `__dir__` method to retrieve the canonicalized absolute path to the current file.
+Style/Dir:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks for double rubocop:disable comments on a single line.
+Style/DoubleCopDisableDirective:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Use `Integer#times` for a simple loop which iterates a fixed number of times.
+Style/EachForSimpleLoop:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Omit pipes for empty block parameters.
+Style/EmptyBlockParameter:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Omit parens for empty lambda parameters.
+Style/EmptyLambdaParameter:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Avoid the use of END blocks.
+# StyleGuide: https://rubystyle.guide#no-END-blocks
+Style/EndBlock:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Pass `__FILE__` and `__LINE__` to `eval` method, as they are used by backtraces.
+Style/EvalWithLocation:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Favor the use of `Integer#even?` && `Integer#odd?`.
+# StyleGuide: https://rubystyle.guide#predicate-methods
+Style/EvenOdd:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks use of for or each in multiline loops.
+# StyleGuide: https://rubystyle.guide#no-for-loops
+Style/For:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Avoid modifier if/unless usage on conditionals.
+Style/IfUnlessModifierOfIfUnless:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Do not use if x; .... Use the ternary operator instead.
+# StyleGuide: https://rubystyle.guide#no-semicolon-ifs
+Style/IfWithSemicolon:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Use Kernel#loop for infinite loops. This cop is unsafe in the body may raise a `StopIteration` exception.
+# StyleGuide: https://rubystyle.guide#infinite-loop
+Style/InfiniteLoop:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks for grouping of mixins in `class` and `module` bodies.
+# StyleGuide: https://rubystyle.guide#mixin-grouping
+Style/MixinGrouping:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Do not use then for multi-line if/unless.
+# StyleGuide: https://rubystyle.guide#no-then
+Style/MultilineIfThen:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Avoid comparing a variable with multiple items in a conditional, use Array#include? instead.
+Style/MultipleComparison:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Favor if over unless for negative conditions.
+# StyleGuide: https://rubystyle.guide#if-for-negatives
+Style/NegatedUnless:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Favor until over while for negative conditions.
+# StyleGuide: https://rubystyle.guide#until-for-negatives
+Style/NegatedWhile:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Avoid using nested modifiers.
+# StyleGuide: https://rubystyle.guide#no-nested-modifiers
+Style/NestedModifier:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Recommend usage of double pipe equals (||=) where applicable.
+# StyleGuide: https://rubystyle.guide#double-pipe-for-uninit
+Style/OrAssignment:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Use `%`-literal delimiters consistently.
+# StyleGuide: https://rubystyle.guide#percent-literal-braces
+Style/PercentLiteralDelimiters:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks if uses of %Q/%q match the configured preference.
+Style/PercentQLiterals:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks for an obsolete RuntimeException argument in raise/fail.
+# StyleGuide: https://rubystyle.guide#no-explicit-runtimeerror
+Style/RedundantException:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Don't use self where it's not needed.
+# StyleGuide: https://rubystyle.guide#no-self-unless-required
+Style/RedundantSelf:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Use `sort` instead of `sort_by { |x| x }`.
+Style/RedundantSortBy:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Use `sample` instead of `shuffle.first`, `shuffle.last`, and `shuffle[Integer]`.
+# Reference: https://github.com/JuanitoFatas/fast-ruby#arrayshufflefirst-vs-arraysample-code
+Style/Sample:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Check for the usage of parentheses around stabby lambda arguments.
+# StyleGuide: https://rubystyle.guide#stabby-lambda-with-args
+Style/StabbyLambdaParentheses:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks if uses of quotes match the configured preference.
+# StyleGuide: https://rubystyle.guide#consistent-string-literals
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
+  ConsistentQuotesInMultiline: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Use `strip` instead of `lstrip.rstrip`.
+Style/Strip:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Use symbols as procs instead of blocks when possible.
+Style/SymbolProc:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Class body goes below class statement.
+Style/TrailingBodyOnClass:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Method body goes below definition.
+Style/TrailingBodyOnMethodDefinition:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Module body goes below module statement.
+Style/TrailingBodyOnModule:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks for trailing end statement on line of method body.
+Style/TrailingMethodEndStatement:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Checks for accessing the first element of `String#unpack` instead of using `unpack1`.
+Style/UnpackFirst:
+  Enabled: true
+
+# Supports --auto-correct
+# SafeAutoCorrect: true
+# Description: Use when x then ... for one-line cases.
+# StyleGuide: https://rubystyle.guide#one-line-cases
+Style/WhenThen:
+  Enabled: true
