@@ -5,7 +5,7 @@ project_name = ARGV[0]
 
 # Print usage text if no project name is provided
 if project_name.nil?
-  puts "Usage: ruby init_kata <project_name>"
+  puts "Usage: ruby kata <project_name>"
   exit
 end
 
@@ -16,14 +16,24 @@ Dir.mkdir(project_name)
 Dir.mkdir("#{project_name}/lib")
 Dir.mkdir("#{project_name}/spec")
 
+class_name = project_name.split(/[_-]/).map(&:capitalize).join
+
 # Create an empty file for the main library code
-File.new("#{project_name}/lib/my_library.rb", 'w')
+File.write("#{project_name}/lib/#{project_name}.rb", <<~HEREDOC
+  # frozen_string_literal: true
+
+  class #{class_name}
+  end
+HEREDOC
+)
 
 # Create an example spec file
-File.write("#{project_name}/spec/my_library_spec.rb", <<~HEREDOC
-  require 'my_library'
+File.write("#{project_name}/spec/#{project_name}_spec.rb", <<~HEREDOC
+  # frozen_string_literal: true
 
-  RSpec.describe MyLibrary do
+  require "#{project_name}"
+
+  RSpec.describe #{class_name} do
     it "does something" do
       # Test code goes here
     end
