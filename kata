@@ -22,6 +22,8 @@ class_name = project_name.split(/[_-]/).map(&:capitalize).join
 File.write("#{project_name}/lib/#{project_name}.rb", <<~HEREDOC
   # frozen_string_literal: true
 
+  require "pry"
+
   class #{class_name}
   end
 HEREDOC
@@ -31,6 +33,7 @@ HEREDOC
 File.write("#{project_name}/spec/#{project_name}_spec.rb", <<~HEREDOC
   # frozen_string_literal: true
 
+  require "pry"
   require "#{project_name}"
 
   RSpec.describe #{class_name} do
